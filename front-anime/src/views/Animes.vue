@@ -49,7 +49,7 @@ export default {
   computed: {
     ...mapState(['usuario'])
   },
-  methods: {
+  methods: {  // 4B
     cadastrar () {
       axios
         .post('anime/novo', {

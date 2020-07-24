@@ -25,7 +25,7 @@ public class AnimeServiceImpl implements AnimeService {
 
 	@Override
 	@Transactional
-	@PreAuthorize("hasAnyRole('ROLE_ADMIN', 'ROLE_USER')")
+	@PreAuthorize("hasAnyRole('ROLE_ADMIN', 'ROLE_USER')")  // 3B
 	public Anime adicionarAnime(String identificadorUsuario, String animeNome, String animeChar) {
 		Usuario usuario = usuarioRepo.findTop1ByNomeOrEmail(identificadorUsuario, identificadorUsuario);
 		if (usuario == null) {

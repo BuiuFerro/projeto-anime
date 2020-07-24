@@ -26,7 +26,7 @@ public class Usuario {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "usr_id")
-	@JsonView(View.AnimeCompleto.class)
+	@JsonView(View.AnimeCompleto.class)  // 2C
 	private Long id;
 
 	@Column(name = "usr_nome", unique = true, length = 20, nullable = false)
@@ -42,7 +42,7 @@ public class Usuario {
 
 	@ManyToMany(fetch = FetchType.LAZY)
 	@JoinTable(name = "uau_usuario_autorizacao", joinColumns = { @JoinColumn(name = "usr_id") }, inverseJoinColumns = {
-			@JoinColumn(name = "aut_id") })
+			@JoinColumn(name = "aut_id") })  // 1A
 	private Set<Autorizacao> autorizacoes;
 
 	@JsonIgnore

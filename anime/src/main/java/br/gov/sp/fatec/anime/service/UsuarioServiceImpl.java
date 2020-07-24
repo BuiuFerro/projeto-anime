@@ -31,7 +31,7 @@ public class UsuarioServiceImpl implements UsuarioService {
 	private PasswordEncoder passEncoder;
 
 	@Override
-	@Transactional
+	@Transactional  // 1D
 	@PreAuthorize("hasRole('ROLE_ADMIN')")
 	public Usuario novoUsuario(String nome, String email, String senha, String nomeAutorizacao) {
 		Autorizacao autorizacao = autorizacaoRepo.findByNome(nomeAutorizacao);

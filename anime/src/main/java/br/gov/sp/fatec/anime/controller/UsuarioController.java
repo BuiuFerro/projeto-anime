@@ -14,7 +14,7 @@ import br.gov.sp.fatec.anime.service.UsuarioService;
 
 @RestController
 @RequestMapping(value = "/usuario")
-@CrossOrigin
+@CrossOrigin  // 2B
 public class UsuarioController {
 	@Autowired
 	private UsuarioService usuarioService;

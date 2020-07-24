@@ -18,7 +18,7 @@ import br.gov.sp.fatec.anime.repository.AnimeRepository;
 import br.gov.sp.fatec.anime.service.AnimeService;
 
 @RestController
-@RequestMapping(value = "/anime")
+@RequestMapping(value = "/anime")  // 2A
 @CrossOrigin
 public class AnimeController {
 	@Autowired
@@ -33,7 +33,7 @@ public class AnimeController {
 		return animeService.adicionarAnime(anime.getUsuario(), anime.getAnimeNome(), anime.getAnimePersonagem());
 	}
 
-	@GetMapping(value = "/busca/{charUsr}")
+	@GetMapping(value = "/busca/{charUsr}")  // 1B
 	@JsonView(View.AnimeCompleto.class)
 	public List<Anime> findByCharUsrNomeOrCharUsrEmail(@PathVariable("charUsr") String charUsr) {
 		return animeRepo.findByCharUsrNomeOrCharUsrEmail(charUsr, charUsr);

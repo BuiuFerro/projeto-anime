@@ -3,7 +3,7 @@ import Vuex from 'vuex'
 import axios from 'axios'
 import router from '../router'
 
-Vue.use(Vuex)
+Vue.use(Vuex)  // 4C
 
 export default new Vuex.Store({
   state: {

@@ -14,7 +14,7 @@ import br.gov.sp.fatec.anime.controller.UsuarioDTO;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 
-public class JwtUtils {
+public class JwtUtils {  // 3A
 
 	private static final String KEY = "spring.jwt.sec";
 

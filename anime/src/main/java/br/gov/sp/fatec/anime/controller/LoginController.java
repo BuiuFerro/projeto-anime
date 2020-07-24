@@ -17,10 +17,11 @@ import br.gov.sp.fatec.anime.utils.JwtUtils;
 @RestController
 @CrossOrigin
 public class LoginController {
+
 	@Autowired
 	private AuthenticationManager auth;
 
-	@PostMapping(path = "/login")
+	@PostMapping(path = "/login")  // 1C
 	public UsuarioDTO login(@RequestBody UsuarioDTO login) throws JsonProcessingException {
 		String username = login.getNome();
 		if (username == null) {

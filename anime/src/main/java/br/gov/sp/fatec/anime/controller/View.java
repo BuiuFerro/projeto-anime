@@ -1,6 +1,6 @@
 package br.gov.sp.fatec.anime.controller;
 
-public class View {
+public class View {  // 2C
 
 	public static class AnimeResumo {
 	};
