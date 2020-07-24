@@ -15,31 +15,36 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonView;
+
+import br.gov.sp.fatec.anime.controller.View;
 
 @Entity
-@Table (name = "usr_usuario")
+@Table(name = "usr_usuario")
 public class Usuario {
-	
+
 	@Id
-	@GeneratedValue (strategy=GenerationType.IDENTITY)
-	@Column (name = "usr_id")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "usr_id")
+	@JsonView(View.AnimeCompleto.class)
 	private Long id;
-	
-	@Column (name = "usr_nome", unique=true, length = 20, nullable = false)
+
+	@Column(name = "usr_nome", unique = true, length = 20, nullable = false)
+	@JsonView(View.AnimeCompleto.class)
 	private String nome;
-	
-	@Column (name = "usr_email", unique=true, length = 100, nullable = false)
+
+	@Column(name = "usr_email", unique = true, length = 100, nullable = false)
+	@JsonView(View.AnimeCompleto.class)
 	private String email;
-	
-	@Column(name = "usr_senha", unique=true, length = 100, nullable = false)
+
+	@Column(name = "usr_senha", unique = true, length = 100, nullable = false)
 	private String senha;
-	
+
 	@ManyToMany(fetch = FetchType.LAZY)
-	@JoinTable (name = "uau_usuario_autorizacao",
-		joinColumns = { @JoinColumn(name = "usr_id") },
-		inverseJoinColumns = { @JoinColumn(name = "aut_id") })
+	@JoinTable(name = "uau_usuario_autorizacao", joinColumns = { @JoinColumn(name = "usr_id") }, inverseJoinColumns = {
+			@JoinColumn(name = "aut_id") })
 	private Set<Autorizacao> autorizacoes;
-	
+
 	@JsonIgnore
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "charUsr")
 	private Set<Anime> animes;
@@ -87,9 +92,9 @@ public class Usuario {
 	public Set<Anime> getAnimes() {
 		return animes;
 	}
-	
+
 	public void setAnimes(Set<Anime> animes) {
 		this.animes = animes;
 	}
-	
+
 }

@@ -2,43 +2,53 @@ package br.gov.sp.fatec.anime.controller;
 
 public class UsuarioDTO {
 
-     private String nome;
+	private String nome;
 
-     private String email;
+	private String email;
 
-     private String senha;
+	private String senha;
 
-     private String autorizacao;
+	private String autorizacao;
 
-    public String getNome() {
-        return nome;
-    }
+	private String token;
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
+	public String getToken() {
+		return token;
+	}
 
-    public String getEmail() {
-        return email;
-    }
+	public void setToken(String token) {
+		this.token = token;
+	}
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
+	public String getNome() {
+		return nome;
+	}
 
-    public String getSenha() {
-        return senha;
-    }
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
 
-    public void setSenha(String senha) {
-        this.senha = senha;
-    }
+	public String getEmail() {
+		return email;
+	}
 
-    public String getAutorizacao() {
-        return autorizacao;
-    }
+	public void setEmail(String email) {
+		this.email = email;
+	}
 
-    public void setAutorizacao(String autorizacao) {
-        this.autorizacao = autorizacao;
-    }
+	public String getSenha() {
+		return senha;
+	}
+
+	public void setSenha(String senha) {
+		this.senha = senha;
+	}
+
+	public String getAutorizacao() {
+		return autorizacao;
+	}
+
+	public void setAutorizacao(String autorizacao) {
+		this.autorizacao = autorizacao;
+	}
 }

@@ -12,65 +12,74 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonView;
+
+import br.gov.sp.fatec.anime.controller.View;
+
 @Entity
 @Table(name = "anime_chars")
 public class Anime {
 
-    @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
-    @Column (name = "anm_id")
-    private Long id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "anm_id")
+	@JsonView(View.AnimeCompleto.class)
+	private Long id;
 
-    @Column (name = "anm_char", length=100, nullable = false)
-    private String animePersonagem;
+	@Column(name = "anm_char", length = 100, nullable = false)
+	@JsonView(View.AnimeResumo.class)
+	private String animePersonagem;
 
-    @Column (name = "anm_name", length=100, nullable = false)
-    private String animeNome;
+	@Column(name = "anm_name", length = 100, nullable = false)
+	@JsonView(View.AnimeResumo.class)
+	private String animeNome;
 
-    @Column (name = "anm_ano", nullable = false)
-    private Date animeAno;
+	@Column(name = "anm_ano", nullable = false)
+	@JsonView(View.AnimeCompleto.class)
+	private Date animeAno;
 
-    @ManyToOne (fetch = FetchType.EAGER)
-    @JoinColumn (name = "anm_char_usr_id")
-    private Usuario charUsr;
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name = "anm_char_usr_id")
+	@JsonView(View.AnimeCompleto.class)
+	private Usuario charUsr;
 
-    public Long getId() {
-        return id;
-    }
+	public Long getId() {
+		return id;
+	}
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+	public void setId(Long id) {
+		this.id = id;
+	}
 
-    public String getAnimePersonagem() {
-        return animePersonagem;
-    }
+	public String getAnimePersonagem() {
+		return animePersonagem;
+	}
 
-    public void setAnimePersonagem(String animePersonagem) {
-        this.animePersonagem = animePersonagem;
-    }
+	public void setAnimePersonagem(String animePersonagem) {
+		this.animePersonagem = animePersonagem;
+	}
 
-    public String getAnimeNome() {
-        return animeNome;
-    }
+	public String getAnimeNome() {
+		return animeNome;
+	}
 
-    public void setAnimeNome(String animeNome) {
-        this.animeNome = animeNome;
-    }
+	public void setAnimeNome(String animeNome) {
+		this.animeNome = animeNome;
+	}
 
-    public Date getAnimeAno() {
-        return animeAno;
-    }
+	public Date getAnimeAno() {
+		return animeAno;
+	}
 
-    public void setAnimeAno(Date animeAno) {
-        this.animeAno = animeAno;
-    }
+	public void setAnimeAno(Date animeAno) {
+		this.animeAno = animeAno;
+	}
 
-    public Usuario getCharUsr() {
-        return charUsr;
-    }
+	public Usuario getCharUsr() {
+		return charUsr;
+	}
 
-    public void setCharUsr(Usuario charUsr) {
-        this.charUsr = charUsr;
-    }
+	public void setCharUsr(Usuario charUsr) {
+		this.charUsr = charUsr;
+	}
 }

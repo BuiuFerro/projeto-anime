@@ -6,6 +6,6 @@ import br.gov.sp.fatec.anime.entity.Autorizacao;
 
 public interface AutorizacaoRepository extends JpaRepository<Autorizacao, Long> {
 
-    public Autorizacao findByNome(String nome);
+	public Autorizacao findByNome(String nome);
 
 }

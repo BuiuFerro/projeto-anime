@@ -11,28 +11,28 @@ import javax.persistence.Table;
 @Table(name = "aut_autorizacao")
 public class Autorizacao {
 
-    @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
-    @Column(name = "aut_id")
-    private Long id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "aut_id")
+	private Long id;
 
-    @Column(name = "aut_nome", unique=true, length=20, nullable = false)
-    private String nome;
+	@Column(name = "aut_nome", unique = true, length = 20, nullable = false)
+	private String nome;
 
-    public Long getId() {
-        return id;
-    }
+	public Long getId() {
+		return id;
+	}
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+	public void setId(Long id) {
+		this.id = id;
+	}
 
-    public String getNome() {
-        return nome;
-    }
+	public String getNome() {
+		return nome;
+	}
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
 
 }

@@ -1,1 +1,18 @@
-/.metadata/
+.metadata/
+.vscode/
+
+### Backend ###
+anime/target/
+anime/.mvn/
+anime/.settings/
+anime/.classpath
+anime/.project
+anime/HELP.md
+anime/mvnw
+anime/mvnw.cmd
+
+### Frontend ###
+front-anime/node_modules/
+front-anime/.editorconfig
+
+
