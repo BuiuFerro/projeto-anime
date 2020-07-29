@@ -6,4 +6,6 @@ public interface AnimeService {
 
 	public Anime adicionarAnime(String identificadorUsuario, String animeNome, String animeChar);
 
+	public Anime alterarPersonagens(String identificadorUsuario, Long identificadorAnime, String animeNome, String animeChar);
+
 }

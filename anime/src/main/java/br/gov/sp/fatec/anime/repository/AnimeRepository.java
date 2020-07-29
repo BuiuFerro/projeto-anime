@@ -11,5 +11,5 @@ public interface AnimeRepository extends JpaRepository<Anime, Long> {
 
 	@PreAuthorize("isAuthenticated()")
 	public List<Anime> findByCharUsrNomeOrCharUsrEmail(String nome, String email);
-
+	
 }

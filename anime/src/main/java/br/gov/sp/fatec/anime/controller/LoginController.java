@@ -21,7 +21,7 @@ public class LoginController {
 	@Autowired
 	private AuthenticationManager auth;
 
-	@PostMapping(path = "/login")  // 1C
+	@PostMapping(path = "/login")
 	public UsuarioDTO login(@RequestBody UsuarioDTO login) throws JsonProcessingException {
 		String username = login.getNome();
 		if (username == null) {

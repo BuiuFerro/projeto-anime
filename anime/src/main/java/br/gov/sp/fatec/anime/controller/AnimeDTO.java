@@ -4,6 +4,8 @@ import java.util.Date;
 
 public class AnimeDTO {
 
+	private Long animeId;
+
 	private String usuario;
 
 	private String animePersonagem;
@@ -42,5 +44,13 @@ public class AnimeDTO {
 
 	public void setAnimeAno(Date animeAno) {
 		this.animeAno = animeAno;
+	}
+
+	public Long getAnimeId() {
+		return animeId;
+	}
+
+	public void setId(Long animeId) {
+		this.animeId = animeId;
 	}
 }

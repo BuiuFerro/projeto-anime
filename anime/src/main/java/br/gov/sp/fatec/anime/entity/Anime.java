@@ -17,7 +17,7 @@ import com.fasterxml.jackson.annotation.JsonView;
 import br.gov.sp.fatec.anime.controller.View;
 
 @Entity
-@Table(name = "anime_chars")
+@Table(name = "anm_anime")
 public class Anime {
 
 	@Id
