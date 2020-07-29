@@ -19,6 +19,11 @@ const routes = [ // 4A
     path: '/anime',
     name: 'Animes',
     component: () => import('../views/Animes.vue')
+  },
+  {
+    path: '/update',
+    name: 'Update',
+    component: () => import('../views/Update.vue')
   }
 ]
 

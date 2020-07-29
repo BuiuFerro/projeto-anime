@@ -4,6 +4,7 @@
       <router-link to="/">Home  </router-link>
       <router-link to="/anime">  Animes  </router-link>
       <router-link to="/login"> Login</router-link>
+      <router-link to="/update"> Update</router-link>
     </div>
     <router-view />
   </div>
